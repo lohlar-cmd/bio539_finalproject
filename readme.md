@@ -1,9 +1,9 @@
 
 
 
-# Project tittle: GENETIC VARIABILITY OF EARLY MATURING INBRED MAIZE UNDER ARTIFICIAL AND NATURAL INFESTATION OF FALL ARMYWORM (Spodoptera frugiperda J.E. Smith)
+# Project tittle: GENETIC VARIABILITY OF EARLY MATURING INBRED MAIZE LINE INFESTATION OF FALL ARMYWORM (Spodoptera frugiperda J.E. Smith)
 
-This repository contains R scripts and data to evaluate genetic variability for resistance to Fall Armyworm (FAW) among early-maturing white maize inbred lines under infested (natural and artificial infestations) and control environment. It also identifies promising hybrids that combine FAW resistance with grain yield and other desirable agronomic characteristics, and assesses relationships between agronomic traits and FAW resistance.
+This repository contains R scripts and data to evaluate genetic variability for resistance to Fall Armyworm (FAW) among early-maturing white maize inbred lines under infested (natural and artificial infestations) and control condition. It also identifies promising hybrids that combine FAW resistance with grain yield and other desirable agronomic characteristics, and assesses relationships between agronomic traits and FAW resistance.
 
 ## Table of Contents
 1. Overview 
@@ -21,7 +21,8 @@ objectives:
 This project aims to:
 1. Evaluate genetic variability for FAW resistance across maize hybrids and environments.
 2. Identify promising hybrids that combine FAW resistance with high grain yield and desirable agronomic traits.
-3. Assess relationships between agronomic traits and FAW resistance.
+3. Assess relationships between agronomic traits and FAW resistance and
+4. determine the genetic performace of parents for grain yield and FAW resistance.
 
 The analysis uses statistical methods such as ANOVA, AMMI, correlation analysis, and regression modeling. Visualizations include violin plots, scatter plots, bar charts, and lollipop charts.
 
@@ -56,10 +57,11 @@ To run this project, you need the following software and libraries installed:
   - `tidyverse`
   - `agricolae`
   - `ggplot2`
+  -  `lme4`
 
 Install required packages using:
 ```R
-install.packages(c("dplyr", "tidyverse", "agricolae", "ggplot2"))
+install.packages(c("dplyr", "tidyverse", "agricolae", "lme4", ))
 ```
 
 
@@ -76,6 +78,19 @@ To reproduce the analysis:
 - Summary statistics and ANOVA results will be saved as `.txt` files in the `results/` folder.
 
 ---
+
+##  Prepare the Data
+
+1.Place the raw dataset (MAIZE_DATA.csv) in the data/ folder.
+
+2.Run the data_cleaning.R script to clean and preprocess the data:
+
+## source("scripts/data_cleaning.R")
+This script will:
+
+Convert categorical variables (male, female, rep, env) to factors.
+Add environment labels (e.g., "Infested" and "Controlled").
+Generate the cleaned dataset (maize_clean.csv) in the data/ folder.
 
 ## Analysis Steps
 
@@ -97,6 +112,14 @@ To reproduce the analysis:
 2. Fit a multiple linear regression model to predict `EASP` from agronomic traits.
 3. Visualize relationships using scatter plots and lollipop charts.
 
+###determine the Genetic Performance of Parents (hybrid)
+# using the General Combining Ability (GCA) effects of parents for grain yield (GY) and FAW resistance (EASP).
+Key Steps :
+1.Fit linear mixed-effects models using the lmer function from the lme4 package.
+2.Extract random effects to estimate GCA effects for male and female parents.
+3.Visualize GCA effects using bar plots or dot plots.
+4.Identify parents with significant positive GCA effects for grain yield and negative GCA effects for FAW resistance.
+
 ---
 
 ## Results
@@ -116,6 +139,10 @@ The outputs of the analysis include:
 3. **Files**:
    - Saved figures in `outputs/`.
    - Summary statistics and ANOVA results in `results/`.
+
+4. **files*
+   - Tables
+   _ different types of plots including box and scatter plot
 
 ---
 
