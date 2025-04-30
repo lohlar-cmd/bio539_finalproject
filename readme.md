@@ -112,8 +112,8 @@ Generate the cleaned dataset (maize_clean.csv) in the data/ folder.
 2. Fit a multiple linear regression model to predict `EASP` from agronomic traits.
 3. Visualize relationships using scatter plots and lollipop charts.
 
-###determine the Genetic Performance of Parents (hybrid)
-# using the General Combining Ability (GCA) effects of parents for grain yield (GY) and FAW resistance (EASP).
+### question 4: determine the Genetic Performance of Parents (hybrid)
+### using the General Combining Ability (GCA) effects of parents for grain yield (GY) and FAW resistance (EASP).
 Key Steps :
 1.Fit linear mixed-effects models using the lmer function from the lme4 package.
 2.Extract random effects to estimate GCA effects for male and female parents.
