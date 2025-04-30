@@ -124,7 +124,7 @@ maize_aggregated <- maize_data %>%
     mean_EASP = mean(EASP, na.rm = TRUE),
     mean_GY = mean(GY, na.rm = TRUE),
     mean_PHT = mean(PHT, na.rm = TRUE), # Plant height
-    mean_EHT = mean(EH, na.rm = TRUE), # Ear height
+    mean_EHT = mean(EHT, na.rm = TRUE), # Ear height
     mean_DA = mean(DA, na.rm = TRUE),    # Days to anthesis
     mean_DS = mean(DS, na.rm = TRUE),    # Days to silking
     mean_ASI = mean(ASI, na.rm = TRUE), # Anthesis-silking interval
@@ -650,7 +650,7 @@ easp_model <- lmer(
     BIC(easp_model_control)    
     # Save GCA effects to CSV file
     write.csv(easp_gca_effects_control, "gca_effects_faw_resistance_control.csv", row.names = FALSE)    
-    )    
+        
 
 
 
