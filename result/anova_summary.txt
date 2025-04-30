@@ -1,0 +1,161 @@
+                  Df Sum Sq Mean Sq F value   Pr(>F)    
+hybrid            63 108.84  1.7276   2.340 2.48e-05 ***
+env_label          1   1.41  1.4102   1.910    0.169    
+hybrid:env_label  63  42.84  0.6800   0.921    0.637    
+Residuals        128  94.50  0.7383                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                  Df Sum Sq Mean Sq F value   Pr(>F)    
+hybrid            63 108.84  1.7276   2.340 2.48e-05 ***
+env_label          1   1.41  1.4102   1.910    0.169    
+hybrid:env_label  63  42.84  0.6800   0.921    0.637    
+Residuals        128  94.50  0.7383                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "/mnt/homes4celsrs/omolola.thompson/bio539project"
+
+Warning. The analysis AMMI is not possible.
+The number of environments and number of genotypes must be greater than 2
+         Length Class      Mode   
+ANOVA      5    anova      list   
+genXenv  128    by         numeric
+analysis   7    data.frame list   
+means      4    data.frame list   
+biplot     3    data.frame list   
+PC         1    -none-     logical
+
+Warning. The analysis AMMI is not possible.
+The number of environments and number of genotypes must be greater than 2
+# A tibble: 10 × 10
+   hybrid mean_EASP mean_GY mean_PHT mean_EHT mean_DA mean_DS mean_ASI mean_EPP combined_score
+   <fct>      <dbl>   <dbl>    <dbl>    <dbl>   <dbl>   <dbl>    <dbl>    <dbl>          <dbl>
+ 1 H10-15      3.25   7650.     192.     74.8    54.8    54       0.75    0.925           7.14
+ 2 H4-8        2.75   7078.     182.     81      54.2    54       1.25    0.925           6.45
+ 3 H5-9        3.25   7116.     174.     79.8    55      55       0       0.925           6.36
+ 4 H1-8        3.25   6620.     170      74.8    55      55.5     0.5     0.8             5.88
+ 5 H13-3       3.5    6454.     184.     78.8    56.8    57.2     0.5     0.75            5.79
+ 6 H3-8        3.25   6501.     171      76.2    55.5    56.5     1       0.85            5.76
+ 7 H12-15      3      5818.     185      85.2    53.8    53.2     1       0.875           5.15
+ 8 H2-8        3.25   5800.     181.     81.2    56.5    58       1.5     0.95            5.11
+ 9 H16-2       3      5755      165      68.8    55.5    56.2     0.75    0.8             5.05
+10 H10-13      3.5    5688.     178.     77.5    56      56.8     0.75    0.875           4.97
+# A tibble: 5 × 9
+  hybrid mean_EASP mean_GY mean_PHT mean_EHT mean_DA mean_DS mean_ASI mean_EPP
+  <fct>      <dbl>   <dbl>    <dbl>    <dbl>   <dbl>   <dbl>    <dbl>    <dbl>
+1 H10-15      3.25   7650.     192.     74.8    54.8    54       0.75    0.925
+2 H12-15      3      5818.     185      85.2    53.8    53.2     1       0.875
+3 H13-3       3.5    6454.     184.     78.8    56.8    57.2     0.5     0.75 
+4 H2-8        3.25   5800.     181.     81.2    56.5    58       1.5     0.95 
+5 H4-8        2.75   7078.     182.     81      54.2    54       1.25    0.925
+# A tibble: 42 × 6
+# Groups:   env_label [2]
+   env_label hybrid mean_EASP sd_EASP var_EASP condition
+   <chr>     <fct>      <dbl>   <dbl>    <dbl> <chr>    
+ 1 Infested  H5-10        2     1.41       2   Infested 
+ 2 Infested  H5-9         2     0          0   Infested 
+ 3 Infested  H12-15       2.5   0.707      0.5 Infested 
+ 4 Infested  H4-8         2.5   0.707      0.5 Infested 
+ 5 Infested  H5-12        2.5   0.707      0.5 Infested 
+ 6 Infested  H7-10        2.5   0.707      0.5 Infested 
+ 7 Infested  H8-12        2.5   0.707      0.5 Infested 
+ 8 Infested  H1-7         3     0          0   Infested 
+ 9 Infested  H1-8         3     0          0   Infested 
+10 Infested  H10-15       3     0          0   Infested 
+# ℹ 32 more rows
+# ℹ Use `print(n = ...)` to see more rows
+            mean_EASP     mean_GY    mean_PHT    mean_EHT     mean_DA     mean_DS    mean_ASI
+mean_EASP  1.00000000 -0.57203923 -0.26787336 -0.20355725  0.24661938  0.26362736  0.05715166
+mean_GY   -0.57203923  1.00000000  0.21618671  0.09450007 -0.23391724 -0.25076760 -0.16477633
+mean_PHT  -0.26787336  0.21618671  1.00000000  0.62755203 -0.08628118 -0.13558196 -0.06838689
+mean_EHT  -0.20355725  0.09450007  0.62755203  1.00000000 -0.24082563 -0.25962440 -0.11043759
+mean_DA    0.24661938 -0.23391724 -0.08628118 -0.24082563  1.00000000  0.94017876 -0.04204028
+mean_DS    0.26362736 -0.25076760 -0.13558196 -0.25962440  0.94017876  1.00000000  0.01404584
+mean_ASI   0.05715166 -0.16477633 -0.06838689 -0.11043759 -0.04204028  0.01404584  1.00000000
+mean_EPP  -0.32918941  0.31166954  0.19582181  0.01650477 -0.03201432 -0.08181510 -0.01384311
+             mean_EPP
+mean_EASP -0.32918941
+mean_GY    0.31166954
+mean_PHT   0.19582181
+mean_EHT   0.01650477
+mean_DA   -0.03201432
+mean_DS   -0.08181510
+mean_ASI  -0.01384311
+mean_EPP   1.00000000
+
+Call:
+lm(formula = mean_EASP ~ mean_PHT + mean_EHT + mean_DA + mean_DS + 
+    mean_ASI + mean_EPP + mean_GY, data = maize_aggregated)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.34094 -0.29098 -0.03158  0.36173  0.99812 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  6.1940700  4.0813200   1.518  0.13472    
+mean_PHT    -0.0043290  0.0092293  -0.469  0.64085    
+mean_EHT    -0.0089141  0.0135686  -0.657  0.51390    
+mean_DA      0.0362006  0.1694645   0.214  0.83162    
+mean_DS      0.0133496  0.1256991   0.106  0.91580    
+mean_ASI    -0.0589468  0.1743100  -0.338  0.73650    
+mean_EPP    -1.5979057  1.1248363  -1.421  0.16099    
+mean_GY     -0.0004025  0.0000979  -4.112  0.00013 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5453 on 56 degrees of freedom
+Multiple R-squared:  0.3879,	Adjusted R-squared:  0.3114 
+F-statistic: 5.071 on 7 and 56 DF,  p-value: 0.0001673
+
+
+Call:
+lm(formula = mean_EASP ~ mean_PHT + mean_EHT + mean_DA + mean_DS + 
+    mean_ASI + mean_EPP + mean_GY, data = maize_aggregated)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.34094 -0.29098 -0.03158  0.36173  0.99812 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  6.1940700  4.0813200   1.518  0.13472    
+mean_PHT    -0.0043290  0.0092293  -0.469  0.64085    
+mean_EHT    -0.0089141  0.0135686  -0.657  0.51390    
+mean_DA      0.0362006  0.1694645   0.214  0.83162    
+mean_DS      0.0133496  0.1256991   0.106  0.91580    
+mean_ASI    -0.0589468  0.1743100  -0.338  0.73650    
+mean_EPP    -1.5979057  1.1248363  -1.421  0.16099    
+mean_GY     -0.0004025  0.0000979  -4.112  0.00013 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5453 on 56 degrees of freedom
+Multiple R-squared:  0.3879,	Adjusted R-squared:  0.3114 
+F-statistic: 5.071 on 7 and 56 DF,  p-value: 0.0001673
+
+
+Call:
+lm(formula = mean_EASP ~ mean_PHT + mean_EHT + mean_DA + mean_DS + 
+    mean_ASI + mean_EPP + mean_GY, data = maize_aggregated)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.34094 -0.29098 -0.03158  0.36173  0.99812 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  6.1940700  4.0813200   1.518  0.13472    
+mean_PHT    -0.0043290  0.0092293  -0.469  0.64085    
+mean_EHT    -0.0089141  0.0135686  -0.657  0.51390    
+mean_DA      0.0362006  0.1694645   0.214  0.83162    
+mean_DS      0.0133496  0.1256991   0.106  0.91580    
+mean_ASI    -0.0589468  0.1743100  -0.338  0.73650    
+mean_EPP    -1.5979057  1.1248363  -1.421  0.16099    
+mean_GY     -0.0004025  0.0000979  -4.112  0.00013 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.5453 on 56 degrees of freedom
+Multiple R-squared:  0.3879,	Adjusted R-squared:  0.3114 
+F-statistic: 5.071 on 7 and 56 DF,  p-value: 0.0001673
+
