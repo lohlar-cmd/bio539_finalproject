@@ -94,31 +94,32 @@ Generate the cleaned dataset (maize_clean.csv) in the data/ folder.
 
 ## Analysis Steps
 
-### Question 1: Evaluate Genetic Variability for FAW Resistance
+### Question 1: Evaluate Genetic Variability for FAW Resistance across environments.
 1. Load and preprocess the data.
-2. Group data by environment and hybrid to calculate summary statistics (`mean_EASP`, `sd_EASP`, `var_EASP`).
-3. Visualize variability using violin plots and boxplots.
-4. Perform ANOVA to test for significant differences in `EASP` across hybrids and environments.
-5. Conduct AMMI analysis to assess stability across environments.
+2. Group data by environment and hybrid to calculate summary statistics (mean_EASP, sd_EASP, var_EASP).
+3. Visualize variability using violin plots and boxplots to compare hybrid performance under controlled and infested conditions.
+4. Perform ANOVA to test for significant differences in `EASP` across hybrids and environments using the aov function.
+5. Conducted AMMI analysis to assess stability across environments using AMMI function from the agricolae package.
 
-### Question 2: Identify Promising Hybrids
-1. Aggregate data by hybrid to calculate mean values for `EASP`, `GY`, and other agronomic traits.
-2. Filter hybrids based on thresholds for `EASP` (bottom 25%) and `GY` (top 25%).
+### Question 2: Identify Promising Hybrids that combine FAW resistance with yield and other desirable agronomic characteristics.
+
+1. Aggregate data by hybrid to calculate mean values for EASP, GY, PHT, EHT and other trait.
+2. Filter hybrids based on thresholds for low `EASP` (better resistance) and high `GY` (top 25%).
 3. Add a combined score to rank hybrids.
 4. Visualize top-performing hybrids using scatter plots and bar charts.
+5. calculated the coefficient of variation (cv) for stability analysis across environment.
 
 ### Question 3: Assess Relationships Between Agronomic Traits and FAW Resistance
-1. Compute correlations between `EASP` and agronomic traits.
-2. Fit a multiple linear regression model to predict `EASP` from agronomic traits.
+1. Compute correlations between `EASP` and agronomic traits using (cor).
+2. Fit a multiple linear regression model using (lm) to predict `EASP` from agronomic traits.
 3. Visualize relationships using scatter plots and lollipop charts.
 
 ### question 4: determine the Genetic Performance of Parents (hybrid) for grain yield and FAW resistance.
-### using the General Combining Ability (GCA) effects of parents for grain yield (GY) and FAW resistance (EASP).
-Key Steps :
-1.Fit linear mixed-effects models using the lmer function from the lme4 package.
-2.Extract random effects to estimate GCA effects for male and female parents.
-3.Visualize GCA effects using bar plots or dot plots.
-4.Identify parents with significant positive GCA effects for grain yield and negative GCA effects for FAW resistance.
+1. using the General Combining Ability (GCA) effects of parents for grain yield (GY) and FAW resistance (EASP).
+2.Fit linear mixed-effects models using the (lmer) function from the lme4 package.
+3.Extract random effects for GY and EASP using ranef function and converted  them into interpretable data frames.
+4.Visualize GCA effects using bar plots and dot plots to identify top performing parent
+5.Identify parents with significant positive GCA effects for grain yield and negative GCA effects for FAW resistance.
 
 ---
 
